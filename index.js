@@ -32,6 +32,12 @@ runCommand('git', ['clone', repoURL, name])
   });
 
 function runCommand(command, args, options = undefined) {
+  var windowsEnvironment = process.platform === "win32";
+  if (windowsEnvironment) {
+    var command = 'npm.cmd'
+  } else {
+    var command = 'npm'
+  }
   const spawned = spawn(command, args, options)
     .on('error', function (err) { throw err });
 
