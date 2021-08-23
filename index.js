@@ -6,7 +6,7 @@ const name = process.argv[2];
 if (!name || name.match(/[<>:"\/\\|?*\x00-\x1F]/)) {
   return console.log(`
   Invalid directory name.
-  Usage: create-express-api name-of-api  
+  Usage: create-reactfire-app my-api  
 `);
 }
 
@@ -25,10 +25,12 @@ runCommand('git', ['clone', repoURL, name])
       shell: true
     });
   }).then(() => {
-    console.log('Done! 🏁');
+    console.log('Done! 🏁\n');
     console.log(`Created ${name} at ${process.cwd() + '/' + name}`);
     console.log('We suggest that you begin by typing:\n');
     console.log('cd', name);
+    console.log('npm install --g firebase-tools');
+    console.log('firebase login');
     console.log('firebase init');
     console.log('npm start\n');
     console.log('Happy hacking!');
