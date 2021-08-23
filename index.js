@@ -19,8 +19,8 @@ runCommand('git', ['clone', repoURL, name])
     return runCommand('rm', ['-rf', `${name}/index.js`]);
   }).then(() => {
     console.log('Installing dependencies...');
-    // return runCommand('npm', ['install'], {
-    return runCommand('npm', [], {
+    return runCommand('npm', ['install'], {
+    // return runCommand('npm', [], {
       // cwd: process.cwd() + '/' + name,
       shell: true
     });
@@ -30,11 +30,11 @@ runCommand('git', ['clone', repoURL, name])
     console.log('To get started:');
     console.log('cd', name);
     console.log('firebase init');
-    if (os.platform() === 'win32') { // process.platform was undefined for me, but this works
-      execSync(`taskkill /F /T /PID ${process.pid}`); // windows specific
-    } else {
-      process.kill();
-    }
+    // if (os.platform() === 'win32') { // process.platform was undefined for me, but this works
+    //   execSync(`taskkill /F /T /PID ${process.pid}`); // windows specific
+    // } else {
+    //   process.kill();
+    // }
   });
 
 function runCommand(command, args, options = undefined) {
