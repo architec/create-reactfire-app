@@ -37,9 +37,7 @@ function runCommand(command, args, options = undefined) {
   if (command === 'npm' && windowsEnvironment) {
     var command = 'npm.cmd'
     // var command = process.execPath
-  } else {
-    var command = 'npm'
-  }
+  } 
   const spawned = spawn(command, args, options)
     .on('error', function (err) { throw err });
 
