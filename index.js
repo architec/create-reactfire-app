@@ -12,29 +12,29 @@ if (!name || name.match(/[<>:"\/\\|?*\x00-\x1F]/)) {
 
 const repoURL = 'https://github.com/arctdav/react-web-firebase-starter.git';
 console.log('cwd: ', process.cwd() )
-spawn('git', ['clone', repoURL, name])
-  // .then(() => {
-  //   return runCommand('rm', ['-rf', `${name}/.git`]);
-  // }).then(() => {
-  //   return runCommand('rm', ['-rf', `${name}/index.js`]);
-  // }).then(() => {
-  //   console.log('Installing dependencies...');
-  //   return runCommand('npm', ['install'], {
-  //   // return runCommand('npm', [], {
-  //     cwd: process.cwd() + '/' + name,
-  //     shell: true
-  //   });
-  // }).then(() => {
-  //   console.log('Done! 🏁');
-  //   console.log('');
-  //   console.log('To get started:');
-  //   console.log('cd', name);
-  //   console.log('firebase init');
-  // });
+runCommand('git', ['clone', repoURL, name])
+  .then(() => {
+    return runCommand('rm', ['-rf', `${name}/.git`]);
+  }).then(() => {
+    return runCommand('rm', ['-rf', `${name}/index.js`]);
+  }).then(() => {
+    console.log('Installing dependencies...');
+    return runCommand('npm', ['install'], {
+    // return runCommand('npm', [], {
+      cwd: process.cwd() + '/' + name,
+      shell: true
+    });
+  }).then(() => {
+    console.log('Done! 🏁');
+    console.log('');
+    console.log('To get started:');
+    console.log('cd', name);
+    console.log('firebase init');
+  });
 
 function runCommand(command, args, options = undefined) {
   var windowsEnvironment = process.platform === "win32";
-  if (windowsEnvironment) {
+  if (command === 'npm' && windowsEnvironment) {
     var command = 'npm.cmd'
     // var command = process.execPath
   } else {
