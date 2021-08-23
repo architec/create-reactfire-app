@@ -17,6 +17,6 @@
   "description": "A CLI to automatically create react web app with reactfire configuration",
   "repository": {
     "type": "git",
-    "url": "https://github.com/w3cj/create-express-api.git"
+    "url": "https://github.com/arctdav/create-reactfire-app.git"
   }
 }

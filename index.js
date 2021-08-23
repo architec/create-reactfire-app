@@ -16,6 +16,8 @@ runCommand('git', ['clone', repoURL, name])
   .then(() => {
     return runCommand('rm', ['-rf', `${name}/.git`]);
   }).then(() => {
+    return runCommand('rm', ['-rf', `${name}/index.js`]);
+  }).then(() => {
     console.log('Installing dependencies...');
     return runCommand('npm', ['install'], {
       cwd: process.cwd() + '/' + name
