@@ -20,7 +20,7 @@ runCommand('git', ['clone', repoURL, name])
   }).then(() => {
     console.log('Installing dependencies...');
     // return runCommand('npm', ['install'], {
-    return runCommand('npm', ['--version'], {
+    return runCommand('npm', [], {
       cwd: process.cwd() + '/' + name
     });
   }).then(() => {
