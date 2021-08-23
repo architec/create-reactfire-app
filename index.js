@@ -12,7 +12,7 @@ if (!name || name.match(/[<>:"\/\\|?*\x00-\x1F]/)) {
 
 const repoURL = 'https://github.com/arctdav/react-web-firebase-starter.git';
 
-runCommand('git', ['clone', repoURL, name])
+spawn('git', ['clone', repoURL, name])
   // .then(() => {
   //   return runCommand('rm', ['-rf', `${name}/.git`]);
   // }).then(() => {
@@ -30,11 +30,6 @@ runCommand('git', ['clone', repoURL, name])
   //   console.log('To get started:');
   //   console.log('cd', name);
   //   console.log('firebase init');
-  //   // if (os.platform() === 'win32') { // process.platform was undefined for me, but this works
-  //   //   execSync(`taskkill /F /T /PID ${process.pid}`); // windows specific
-  //   // } else {
-  //   //   process.kill();
-  //   // }
   // });
 
 function runCommand(command, args, options = undefined) {
