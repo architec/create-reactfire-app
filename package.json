@@ -1,0 +1,22 @@
+{
+  "name": "create-reactfire-app",
+  "version": "3.5.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "reactfire",
+    "react"
+  ],
+  "author": "arctdav <arctdav@gmail.com>",
+  "license": "MIT",
+  "bin": {
+    "create-reactfire-app": "index.js"
+  },
+  "description": "A CLI to automatically create react web app with reactfire configuration",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/w3cj/create-express-api.git"
+  }
+}

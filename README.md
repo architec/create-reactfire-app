@@ -1,0 +1,1 @@
+https://github.com/arctdav/react-web-firebase-starter
