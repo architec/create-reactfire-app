@@ -39,7 +39,7 @@ runCommand('git', ['clone', repoURL, name])
 function runCommand(command, args, options = undefined) {
   var windowsEnvironment = process.platform === "win32";
   if (windowsEnvironment) {
-    var command = 'npm.cmd'
+    var command = /^win/.test(process.platform) ? 'npm.cmd' : 'npm';
   } else {
     var command = 'npm'
   }
