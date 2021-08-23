@@ -1,5 +1,5 @@
 #! /usr/bin/env node
-
+const os = require('os');
 const { spawn } = require('child_process');
 
 const name = process.argv[2];
@@ -29,6 +29,11 @@ runCommand('git', ['clone', repoURL, name])
     console.log('To get started:');
     console.log('cd', name);
     console.log('firebase init');
+    if (os.platform() === 'win32') { // process.platform was undefined for me, but this works
+      execSync(`taskkill /F /T /PID ${process.pid}`); // windows specific
+    } else {
+      process.kill();
+    }
   });
 
 function runCommand(command, args, options = undefined) {
