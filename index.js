@@ -11,7 +11,7 @@ if (!name || name.match(/[<>:"\/\\|?*\x00-\x1F]/)) {
 }
 
 const repoURL = 'https://github.com/arctdav/react-web-firebase-starter.git';
-console.log('cwd: ', process.cwd() )
+// console.log('cwd: ', process.cwd() )
 runCommand('git', ['clone', repoURL, name])
   .then(() => {
     return runCommand('rm', ['-rf', `${name}/.git`]);
@@ -26,10 +26,12 @@ runCommand('git', ['clone', repoURL, name])
     });
   }).then(() => {
     console.log('Done! 🏁');
-    console.log('');
-    console.log('To get started:');
+    console.log(`Created ${name} at ${process.cwd() + '/' + name}`);
+    console.log('We suggest that you begin by typing:\n');
     console.log('cd', name);
     console.log('firebase init');
+    console.log('npm start\n');
+    console.log('Happy hacking!');
   });
 
 function runCommand(command, args, options = undefined) {
