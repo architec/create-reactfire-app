@@ -10,9 +10,8 @@ If you have questions or need help, please email [arctdav](mailto:arctdav@gmail.
 
 > Copy config from [Download Firebase config file or object](https://support.google.com/firebase/answer/7015592)
 
-Before starting, please change the following files according to your projects on Firebase website.
-Change /src/firebaseConfig.js
-Change /firebaserc
+Before starting, please change the following files according to your projects on Firebase website. <br>
+**Change /src/firebaseConfig.js and /firebaserc**
 
 ```sh
 npx create-reactfire-app my-app
