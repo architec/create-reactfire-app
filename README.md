@@ -1,7 +1,7 @@
 # Create Reactfire App
 
 - [User Guide](https://github.com/FirebaseExtended/reactfire/blob/main/docs/quickstart.md/) – How to develop apps using React web app and Firebase by Reactfire.
-
+- [Template Repo](https://github.com/arctdav/react-web-firebase-starter)
 Create Reactfire App works on macOS, Windows, and Linux.<br>
 If something doesn’t work, please [file an issue](https://github.com/arctdav/create-reactfire-app/issues/new).<br>
 If you have questions or need help, please email [arctdav](mailto:arctdav@gmail.com).
