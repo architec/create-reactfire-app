@@ -66,7 +66,7 @@ const os = require('os');
 const spawn = require('child_process').spawn;
 
 const spawnTest = (() => {
-  const dir = spawn('dir', {shell: true});       // <== shell: true option
+  const dir = spawn('npm.cmd', {shell: true});       // <== shell: true option
 
   dir.stdout.on('data', (data) => {
     console.log(`spawn stdout: ${data}`);
