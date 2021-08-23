@@ -11,7 +11,7 @@ if (!name || name.match(/[<>:"\/\\|?*\x00-\x1F]/)) {
 }
 
 const repoURL = 'https://github.com/arctdav/react-web-firebase-starter.git';
-
+console.log('cwd: ', process.cwd() )
 spawn('git', ['clone', repoURL, name])
   // .then(() => {
   //   return runCommand('rm', ['-rf', `${name}/.git`]);
