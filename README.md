@@ -28,7 +28,7 @@ _([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7
 
 When you’re ready to deploy to production, create a minified bundle with `npm run build`.
 
-Then, run `npm run deploy` to start hosting on firebase.
+Then, run `npm run deploy`, then `npm run deploy` to start hosting on firebase.
 
 ### Get Started Immediately
 
